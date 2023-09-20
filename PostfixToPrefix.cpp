@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Ki?m tra xem m?t k? t? có ph?i là toán t? hay không
+// Kiem tra xem mot ky tu co phai la toan tu hay khong
 int isOperator(char ch) {
     if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^') {
         return 1;
@@ -10,7 +10,7 @@ int isOperator(char ch) {
     return 0;
 }
 
-// Chuy?n ð?i bi?u th?c h?u t? sang bi?u th?c ti?n t?
+// Chuyen Ã°oi bieu thuc hau to sang bieu thuc tien to
 void postfixToPrefix(char* postfix, char* prefix) {
     int i, j;
     int len = strlen(postfix);
@@ -33,7 +33,7 @@ void postfixToPrefix(char* postfix, char* prefix) {
     prefix[j] = '\0';
 }
 
-// Hàm main
+// Ham main
 int main() {
     char postfix[100];
     char prefix[100];
