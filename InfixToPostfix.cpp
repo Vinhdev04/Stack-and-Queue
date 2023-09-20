@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Ki?m tra xem m?t k? t? có ph?i là toán t? hay không
+// Kiem tra xem mot ky tu co phai la toan tu hay khong
 int isOperator(char ch) {
     if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^') {
         return 1;
@@ -10,7 +10,7 @@ int isOperator(char ch) {
     return 0;
 }
 
-// Ki?m tra xem m?t k? t? có ph?i là d?u ngo?c hay không
+// Kiem tra xem mot ky tu co phai la dau ngoac hay khong
 int isParenthesis(char ch) {
     if (ch == '(' || ch == ')') {
         return 1;
@@ -18,7 +18,7 @@ int isParenthesis(char ch) {
     return 0;
 }
 
-// Ki?m tra xem m?t toán t? có ýu tiên cao hõn toán t? khác hay không
+// Kiem tra xem mot toan tu co uu tien cao hon toan tu khac hay khong
 int isHigherPrecedence(char op1, char op2) {
     if ((op1 == '*' || op1 == '/') && (op2 == '+' || op2 == '-')) {
         return 1;
@@ -29,7 +29,7 @@ int isHigherPrecedence(char op1, char op2) {
     return 0;
 }
 
-// Chuy?n ð?i bi?u th?c trung t? sang bi?u th?c h?u t?
+// Chuyen doi bieu thuc trung to sang bieu thuc hau to
 void infixToPostfix(char* infix, char* postfix) {
     int i, j;
     int len = strlen(infix);
@@ -61,7 +61,7 @@ void infixToPostfix(char* infix, char* postfix) {
     postfix[j] = '\0';
 }
 
-// Hàm main
+// Ham main
 int main() {
     char infix[100];
     char postfix[100];
