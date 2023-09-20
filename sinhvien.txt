@@ -1,0 +1,4 @@
+02    22DTHG8    NAM    PHAM DUC THANH     10.00    10.00    6.00     8.67      
+03    22DTHG8    NAM    LUU VAN NHUT       9.00     9.00     8.00     8.67      
+04    22DTHG8    NAM    CAO BINH TAY       9.00     9.00     10.00    9.33      
+01    22DTHG8    NAM    PHAM CONG VINH     10.00    10.00    10.00    10.00      
