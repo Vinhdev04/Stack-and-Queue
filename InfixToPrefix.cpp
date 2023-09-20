@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Ki?m tra xem m?t k˝ t? cÛ ph?i l‡ to·n t? hay khÙng
+// Kiem tra xem mot ky tu co phai la toan tu hay khong
 int isOperator(char ch) {
     if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^') {
         return 1;
@@ -10,7 +10,7 @@ int isOperator(char ch) {
     return 0;
 }
 
-// Ki?m tra xem m?t k˝ t? cÛ ph?i l‡ d?u ngo?c hay khÙng
+// Kiem tra xem mot ky tu co phai la dau ngoac hay khong
 int isParenthesis(char ch) {
     if (ch == '(' || ch == ')') {
         return 1;
@@ -18,7 +18,7 @@ int isParenthesis(char ch) {
     return 0;
 }
 
-// Ki?m tra d? uu tiÍn c?a c·c to·n t?
+// Kiem tra do uu tien cua cac toan 
 int precedence(char ch) {
     if (ch == '^') {
         return 3;
@@ -31,7 +31,7 @@ int precedence(char ch) {
     }
 }
 
-// –?o ngu?c m?t chu?i
+// Dao nguoc mot chuoi
 void reverseString(char* str) {
     int len = strlen(str);
     int i, j;
@@ -44,14 +44,14 @@ void reverseString(char* str) {
     }
 }
 
-// Chuy?n d?i bi?u th?c trung t? sang bi?u th?c ti?n t?
+// Chuyen doi bieu thuc trung to sang bieu thuc tien to
 void infixToPrefix(char* infix, char* prefix) {
     int i, j;
     int len = strlen(infix);
     char stack[len];
     int top = -1;
 
-    // –?o ngu?c chu?i bi?u th?c trung t?
+    // √êao nguoc chuoi bieu thuc trung toto
     reverseString(infix);
 
     for (i = 0, j = 0; i < len; i++) {
@@ -78,11 +78,11 @@ void infixToPrefix(char* infix, char* prefix) {
 
     prefix[j] = '\0';
 
-    // –?o ngu?c chu?i bi?u th?c ti?n t? k?t qu?
+    // √êao nguoc chuoi bieu thuc tien to ket qua
     reverseString(prefix);
 }
 
-// H‡m main
+// Ham main
 int main() {
     char infix[100];
     char prefix[100];
